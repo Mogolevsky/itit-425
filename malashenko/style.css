@@ -1,36 +1,82 @@
+@font-face {
+    font-family: 'Stieglitz SP';
+    src: url('fonts/StieglitzSP-Bold\ 2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Bold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('photo/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 17px;
+  font-family: 'Cormorant';
   margin: 0;
   padding: 0;
-  background-color: #caddc5;
 }
 
 header {
-  background-color: #464c46;
-  padding: 10px;
+  background: rgba(255, 255, 255, 0.935);
+  padding: 10px 20px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 15px;
+  margin: 28px auto -20px auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+ 
 }
 
+.line {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  letter-spacing: 6px;  
+  margin: 20px auto -10px auto;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);  
+}
+
+
 header a {
-  color: rgb(255, 255, 255);
+  color: rgb(73, 73, 73);
   text-decoration: none;
-  margin: 5px 10px;
+  font-size: 19px;
   padding: 8px 12px;
-  background-color: #89a187;
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 20px;
   transition: background-color 0.3s;
 }
 
 header a:hover {
-  background-color: #5c6862;
+  background-color: #d8d8d85e;
+}
+
+header a:last-child {
+  margin-right: auto;
+}
+
+header a:first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .profile {
   max-width: 800px;
-  margin: 40px auto;
-  background: white;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.935);
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border-radius: 10px;
@@ -38,53 +84,72 @@ header a:hover {
 }
 
 .profile img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
+  object-position: 30% 50%;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  border: 4px solid white;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
 }
 
-.profile h1 {
+.profile img:hover {
+  transform: scale(1.02);    
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);  
+}
+
+.profile-name {
   margin: 10px 0;
-  font-size: 28px;
+  font-size: 40px;
+  font-family: 'Stieglitz SP';
+  font-weight: normal;  
 }
 
 .profile p {
-  color: #777;
+  color: #636363;
   line-height: 1.6;
+  margin-top: 12px;
 }
 
 .hobbies {
+  color: rgb(56, 56, 56);
   margin-top: 30px;
+  
 }
 
 .hobbies h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 15px;
+  font-family: 'Stieglitz SP';
 }
 
 .hobbies ul {
   list-style: none;
   padding: 0;
+
 }
 
 .hobbies ul li {
-  background-color: #f0f0f0;
+  background-color: #f8f8f8;
   transition: background-color 0.3s;
-  margin: 5px auto;
-  padding: 10px;
-  max-width: 400px;
-  border-radius: 5px;
+  margin: 10px auto;
+  padding: 12px;
+  max-width: 300px;
+  border-radius: 25px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
 
 .hobbies ul li:hover {
-  background-color: #c3c3c3;
+  background-color: #ececec;
 }
 
 footer {
   text-align: center;
-  margin: 40px 0;
-  color: #4e5b4f;
-  font-size: 14px;
+  margin-top: -10px; 
+  margin-bottom: 20px;
+  color: #ffffffe0;
+  font-size: 16px;
 }
