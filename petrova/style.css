@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'МойШрифт';
+  src: url('zfont.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +11,12 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'МойШрифт', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: #f5f5f5;
   min-height: 100vh;
   padding: 20px;
   color: #2c3e50;
+  font-weight: 500;
 }
 
 /* Простой header */
@@ -29,12 +35,12 @@ header {
 }
 
 header a {
-  color: #5a6b7a;
+  color: #1e2328;
   text-decoration: none;
   padding: 8px 18px;
   border-radius: 30px;
   background: transparent;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.3px;
 }
@@ -59,8 +65,8 @@ header a:hover {
 }
 
 .profile img {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #f0f0f0;
@@ -76,7 +82,7 @@ header a:hover {
 .profile h1 {
   color: #2c3e50;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 8px;
   letter-spacing: -0.5px;
   background: none;
@@ -84,12 +90,12 @@ header a:hover {
 }
 
 .profile p {
-  color: #6c7a8a;
+  color: #0e0e0f;
   font-size: 16px;
   line-height: 1.6;
   max-width: 500px;
   margin: 0 auto 25px;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 /* Хобби */
@@ -99,7 +105,7 @@ header a:hover {
 
 .hobbies h2 {
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 700;
   color: #4a5b6b;
   margin-bottom: 15px;
   letter-spacing: 0.5px;
@@ -123,7 +129,7 @@ header a:hover {
   min-width: 250px;
   border-radius: 40px;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 700;
   color: #4a5b6b;
   box-shadow: none;
   border: 1px solid #eaeaea;
