@@ -4,6 +4,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Страница о человеке</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Компактная серая плашка */
+    .timer-box {
+      background: #eef2f5;
+      padding: 10px 20px;
+      border-radius: 28px;
+      margin: 20px auto;
+      max-width: 280px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+    
+    .timer-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+    
+    .timer-box h3 {
+      color: #5c6b7a;
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    
+    .timer-numbers {
+      font-size: 28px;
+      font-weight: 600;
+      color: #4a5b6b;
+      margin: 0;
+      background: #ffffff;
+      padding: 8px 16px;
+      border-radius: 50px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02), 0 2px 5px rgba(0,0,0,0.02);
+      letter-spacing: 2px;
+    }
+    
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+    }
+    
+    /* Цитата без овала */
+    .Quote {
+      margin: 20px auto;
+      max-width: 450px;
+      text-align: center;
+    }
+    
+    .Quote p {
+      margin: 0;
+      font-style: italic;
+      color: #6b7a8a;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,15 +72,24 @@
 <section class="profile">
   <img src="photo/petrova.jpg" alt="Фото человека">
   <h1>Петрова Ирина</h1>
-  <p><strong> Люблю фильмы, собачек и ТикТок ✨. В свободное время хожу на каратэ и учу английский.</p>
-  <p><em>"Возьми телефон, детка. Я знаю, ты хочешь позвонить...📲"</em></p>
+  <p><strong>Люблю фильмы, собачек и ТикТок ✨. В свободное время хожу на каратэ и учу английский.</strong></p>
+  
+  <div class="Quote">  
+    <p><em>"Возьми телефон, детка. Я знаю, ты хочешь позвонить...📲"</em></p>
+  </div>
+  
+  <!-- Компактная плашка -->
+  <div class="timer-box">
+    <h3>🎂 ДО ДНЯ РОЖДЕНИЯ</h3>
+    <div class="timer-numbers" id="timer">-- дней</div>
+  </div>
 
   <div class="hobbies">
     <h2>Мои увлечения</h2>
     <ul>
-      <li>Английский</li>
-      <li>Кинология</li>
-      <li>Каратэ</li>
+      <li>🇬🇧 Английский</li>
+      <li>🐕 Кинология</li>
+      <li>🥋 Каратэ</li>
     </ul>
   </div>
 </section>
@@ -31,6 +97,65 @@
 <footer>
   Сделано с кайфом 😎 | 2026
 </footer>
+
+<script>
+// Функция для правильного склонения слова "день"
+function getDaysWord(days) {
+  const lastDigit = days % 10;
+  const lastTwoDigits = days % 100;
+  
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+    return 'дней';
+  }
+  
+  if (lastDigit === 1) {
+    return 'день';
+  }
+  
+  if (lastDigit >= 2 && lastDigit <= 4) {
+    return 'дня';
+  }
+  
+  return 'дней';
+}
+
+// Таймер до дня рождения (27 июля)
+function updateTimer() {
+  const today = new Date();
+  let birthday = new Date(today.getFullYear(), 7, 27); // 27 июля (месяц 7 = август)
+  
+  if (today > birthday) {
+    birthday = new Date(today.getFullYear() + 1, 7, 27);
+  }
+  
+  const diff = birthday - today;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const daysWord = getDaysWord(days);
+  
+  document.getElementById('timer').innerHTML = days + ' ' + daysWord;
+}
+setInterval(updateTimer, 1000);
+updateTimer();
+</script>
+
+<script>
+// Сердечки при клике
+document.body.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+  
+  const heart = document.createElement('div');
+  heart.innerHTML = '❤️';
+  heart.style.position = 'fixed';
+  heart.style.left = e.clientX + 'px';
+  heart.style.top = e.clientY + 'px';
+  heart.style.fontSize = '22px';
+  heart.style.animation = 'floatUp 1s ease-out';
+  heart.style.pointerEvents = 'none';
+  heart.style.zIndex = '9999';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 1000);
+});
+</script>
 
 </body>
 </html>

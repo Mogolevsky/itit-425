@@ -17,7 +17,27 @@ body {
   padding: 20px;
   color: #2c3e50;
   font-weight: 500;
+  position: relative;
 }
+
+/* Фоновое изображение с поворотом */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('photo/fon.jpg'); /* замените на путь к вашей картинке */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg) scale(1.1); /* поворот на 5 градусов + увеличение */
+  opacity: 0.6; /* прозрачность (0 = полностью прозрачный, 1 = непрозрачный) */
+  z-index: -2;
+  pointer-events: none;
+}
+
 
 /* Простой header */
 header {
@@ -32,6 +52,8 @@ header {
   gap: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.03);
   border: 1px solid #eaeaea;
+  position: relative;
+  z-index: 1;
 }
 
 header a {
@@ -62,6 +84,8 @@ header a:hover {
   box-shadow: 0 5px 20px rgba(0,0,0,0.02);
   text-align: center;
   border: 1px solid #f0f0f0;
+  position: relative;
+  z-index: 1;
 }
 
 .profile img {
@@ -153,6 +177,8 @@ footer {
   max-width: 600px;
   padding: 20px;
   border-top: 1px solid #eaeaea;
+  position: relative;
+  z-index: 1;
 }
 
 /* Дополнительные элементы для минимализма */
@@ -200,3 +226,4 @@ footer {
     font-size: 14px;
   }
 }
+
