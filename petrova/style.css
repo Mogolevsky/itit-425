@@ -20,7 +20,7 @@ body {
   position: relative;
 }
 
-/* Фоновое изображение с поворотом */
+/* Фоновое изображение*/
 body::before {
   content: '';
   position: fixed;
@@ -28,12 +28,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('photo/fon.jpg'); /* замените на путь к вашей картинке */
+  background-image: url('photo/fon.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: rotate(180deg) scale(1.1); /* поворот на 5 градусов + увеличение */
-  opacity: 0.6; /* прозрачность (0 = полностью прозрачный, 1 = непрозрачный) */
+  transform: rotate(180deg) scale(1.1); 
+  opacity: 0.6; 
   z-index: -2;
   pointer-events: none;
 }
@@ -172,13 +172,14 @@ header a:hover {
 footer {
   text-align: center;
   margin: 30px auto;
-  color: #8a9aa8;
+  color: #000305;
   font-size: 13px;
   max-width: 600px;
   padding: 20px;
   border-top: 1px solid #eaeaea;
   position: relative;
   z-index: 1;
+  font-weight: 800;
 }
 
 /* Дополнительные элементы для минимализма */
@@ -226,4 +227,3 @@ footer {
     font-size: 14px;
   }
 }
-

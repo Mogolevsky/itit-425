@@ -2,31 +2,195 @@
 <html>
 <head>
 	<title>Сайт группы ИТИТ-425</title>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		@font-face {
+			font-family: 'НашШрифт';
+			src: url('font1.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		body {
+			font-family: 'НашШрифт', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+			background: #f5f5f5;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+		body::before {
+  			content: '';
+  			position: fixed;
+  			top: 0;
+  			left: 0;
+  			width: 100%;
+  			height: 100%;
+  			background-image: url('photo/fon.jpg');
+  			background-size: cover;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			transform: rotate(180deg) scale(1.1); 
+  			opacity: 0.4; 
+  			z-index: -1;
+  			pointer-events: none;
+		}
+
+		.container {
+			max-width: 1200px;
+			width: 100%;
+			background: white;
+			padding: 40px 30px;
+			border-radius: 20px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+			text-align: center;
+		}
+
+		h1 {
+			color: #333;
+			margin-bottom: 30px;
+			font-size: 32px;
+			font-weight: 500;
+		}
+		.greeting {
+			margin-bottom: 50px;
+			animation: fadeIn 1s ease;
+			font-size: 40px;
+  			font-weight: bold;
+		}
+
+		.wave {
+			display: inline-block;
+			animation: wave 2s infinite;
+			font-size: 40px;
+		}
+
+		@keyframes wave {
+			0%, 100% { transform: rotate(0deg); }
+			25% { transform: rotate(15deg); }
+			75% { transform: rotate(-10deg); }
+		}
+
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(-20px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+
+		/* Сетка для кнопок */
+		.buttons-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 15px;
+			margin: 20px 0 30px;
+		}
+
+		/* Стили для кнопок */
+		.student-button {
+			display: inline-block;
+			width: 170px; 
+			padding: 12px 8px;
+			background: white;
+			border: 2px solid #e0e0e0;
+			border-radius: 30px;
+			text-decoration: none;
+			color: #444;
+			font-size: 14px;
+			text-align: center;
+			transition: all 0.2s;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis; 
+		}
+
+		.student-button:hover {
+			background: #f0f0f0;
+			border-color: #ccc;
+			transform: scale(1.02);
+		}
+
+		/* Раскраска для рядов (опционально) */
+		.row-1 .student-button { border-color: #ffcdd2; }
+		.row-2 .student-button { border-color: #fff9c4; }
+		.row-3 .student-button { border-color: #c8e6c9; }
+		.row-4 .student-button { border-color: #bbdefb; }
+
+		.row-1 .student-button:hover { background: #ffebee; }
+		.row-2 .student-button:hover { background: #fffde7; }
+		.row-3 .student-button:hover { background: #e8f5e9; }
+		.row-4 .student-button:hover { background: #e3f2fd; }
+
+		/* Адаптивность */
+		@media (max-width: 768px) {
+			.student-button {
+				width: 130px;
+				font-size: 13px;
+				padding: 10px 5px;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.student-button {
+				width: 100px;
+				font-size: 12px;
+				padding: 8px 4px;
+			}
+		}
+	</style>
 </head>
 <body>
-	<h1>Привет!</h1>
-	<a href="pivnenko/pivnenko.html">Пивненко Максим</a><br>
-	
-	<a href="IZMAILOV/izmailov.html">Измайлов Даниил</a><br>
+	<div class="container">
+		<div class="greeting">
+			<span class="wave">👋</span>
+			<span>Привет, ИТИТ-425!</span>
+		</div>
 
-	<a href="chernishev/chernishev.html">Чернышев Алексей</a><br>
+		<div class="buttons-grid row-1">
+			<a href="pivnenko/pivnenko.html" class="student-button">Пивненко Максим</a>
+			<a href="chernishev/chernishev.html" class="student-button">Чернышев Алексей</a>
+			<a href="dyakonov/dyakonov.html" class="student-button">Дьяконов Артур</a>
+			<a href="petrova/petrova.html" class="student-button">Петрова Ирина</a>
+			<a href="malashenko/malashenko.html" class="student-button">Малашенко Полина</a>
+			<a href="IZMAILOV/izmailov.html" class="student-button">Измайлов Даниил</a>
+		</div>
 
-	<a href="dyakonov/dyakonov.html">Дьяконов Артур</a><br>
+		<div class="buttons-grid row-2">
+			<a href="evdokimova/evdokimova.html" class="student-button">Евдокимова Дарья</a>
+			<a href="plekhanov/pivnenko.html" class="student-button">Плеханов Денис</a>
+			<a href="nikolay/nikolay.html" class="student-button">Кремнев Николай</a>
+			<a href="Zhukov/zhukov (1).html" class="student-button">Жуков Данила</a>
+			<a href="Zamorina/zamorina.html" class="student-button">Заморина Мирра</a>
+			<a class="student-button">Место для тебя</a>
+		</div>
 
-	<a href="petrova/petrova.html">Петрова Ирина</a><br>
+		
+		<div class="buttons-grid row-3">
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+		</div>
 
-	<a href="malashenko/malashenko.html">Малашенко Полина</a><br>
-
-	<a href="evdokimova/evdokimova.html">Евдокимова Дарья</a><br>
-
-	<a href="plekhanov/pivnenko.html">Плеханов Денис</a><br>
-
-	<a href="nikolay/nikolay.html">Кремнев Николай</a><br>
-
-	<a href="Zhukov/zhukov (1).html">Жуков Данила</a><br>
-
-	<a href="Zamorina/zamorina.html">Заморина Мирра</a><br>
-	
-
+		<div class="buttons-grid row-4">
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+			<a class="student-button">Место для тебя</a>
+		</div>
+	</div>
 </body>
 </html>

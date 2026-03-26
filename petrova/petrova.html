@@ -119,10 +119,10 @@ function getDaysWord(days) {
   return 'дней';
 }
 
-// Таймер до дня рождения (27 июля)
+// Таймер до дня рождения 
 function updateTimer() {
   const today = new Date();
-  let birthday = new Date(today.getFullYear(), 7, 27); // 27 июля (месяц 7 = август)
+  let birthday = new Date(today.getFullYear(), 7, 27); 
   
   if (today > birthday) {
     birthday = new Date(today.getFullYear() + 1, 7, 27);
