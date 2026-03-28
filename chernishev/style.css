@@ -1,60 +1,70 @@
+@font-face {
+  font-family: 'font';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 🔥 применяем шрифт ко ВСЕМУ */
+* {
+  font-family: 'font', sans-serif;
+}
+
 body {
-  font-family: Bahnschrift, sans-serif;
   margin: 0;
   padding: 0;
 
   background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,1)),
-    url("photo/bg.webp");
+    linear-gradient(rgba(255,255,255,0.1), rgba(233,255,224,0.7)),
+    url("photo/bg.png");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  color: #f5f5f5;
+  color: #2f3e2f;
 }
 
 /* Навигация */
 
 header {
-  background: #2b1011;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(3px);
   padding: 12px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 header a {
-  color: #ffffff;
+  color: #2f4f2f;
   text-decoration: none;
   margin: 5px 10px;
   padding: 8px 14px;
-  background: #6a0000;
-  border-radius: 6px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 0px;
   transition: all 0.25s ease;
-  font-weight: 500;
 }
 
 header a:hover {
-  background: #a30000;
+  background: #d4f5cc;
   transform: translateY(-2px);
 }
 
 /* Профиль */
 
-/* Профиль */
 .profile {
-  position: relative;          /* для псевдоэлемента */
+  position: relative;
   max-width: 800px;
   margin: 60px auto;
   padding: 40px;
-  background: rgba(20,0,0,0.75);
-  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(3px);
   text-align: center;
-  
-  border-radius: 12px;         /* скругление блока */
+  border-radius: 0px;
   z-index: 1;
 }
 
@@ -64,29 +74,22 @@ header a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1200px;              /* ширина твоей рамки */
-  height: 800px;              /* высота рамки */
+  width: 1200px;
+  height: 800px;
   transform: translate(-50%, -50%);
   background: url("photo/frame.png") no-repeat center center;
   background-size: cover;
-  z-index: 0;                 /* за блоком */
-  pointer-events: none;       /* чтобы не мешала кликам */
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Картинка внутри профиля */
+/* Картинка */
 .profile img {
-  width: 150px;
-  height: 150px;
+  width: 550px;
+  height: 550px;
   object-fit: cover;
-  border-radius: 50%;
   display: block;
   margin: 0 auto 20px auto;
-  border: 3px solid #a30000;
-}
-
-.profile h1,
-.profile p {
-  text-align: center;
 }
 
 /* Хобби */
@@ -98,7 +101,6 @@ header a:hover {
 .hobbies h2 {
   font-size: 24px;
   margin-bottom: 15px;
-  color: #ffffff;
 }
 
 .hobbies ul {
@@ -107,27 +109,23 @@ header a:hover {
 }
 
 .hobbies ul li {
-  background: #6b0000;
   margin: 8px auto;
-  padding: 12px;
+  padding: 22px;
   max-width: 420px;
-  border-radius: 6px;
-  color: #fff;
-  transition: 0.25s;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(3px);
+  transition: 0.2s;
 }
 
 .hobbies ul li:hover {
-  background: #900000;
-  transform: scale(1.03);
+  background: #e8c8c8;
+  transform: scale(1.03) rotate(1deg);
 }
 
 .hobbies ul li a {
-  color: inherit;        
-  text-decoration: none; 
-  display: block;        }
-
-.hobbies ul li a:hover {
-  text-decoration: none; 
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }
 
 /* Футер */
@@ -135,6 +133,6 @@ header a:hover {
 footer {
   text-align: center;
   margin: 40px 0;
-  color: #c9b0b0;
+  color: #6b8f6b;
   font-size: 14px;
 }
