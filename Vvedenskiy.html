@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Платон Введенский | Личная страница</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Тёмная тема */
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+
+    /* Неоново-зелёный цвет */
+    :root {
+      --neon-green: #00ff41;
+      --neon-green-dark: #00cc34;
+      --neon-green-glow: rgba(0, 255, 65, 0.3);
+    }
+
+    /* Дополнительные стили поверх вашего CSS */
+    .rroll-btn {
+      background: linear-gradient(135deg, var(--neon-green), var(--neon-green-dark));
+      color: #0a0a0a;
+      border: none;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 25px auto 10px;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px var(--neon-green-glow);
+    }
+
+    .rroll-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 255, 65, 0.5);
+    }
+
+    .rroll-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Эффект для фото при наведении */
+    .profile img {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 3px solid var(--neon-green);
+      cursor: pointer;
+    }
+
+    .profile img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    /* Анимация появления страницы */
+    .profile {
+      animation: fadeInUp 0.6s ease-out;
+      background-color: #1a1a1a;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Стиль для цитаты */
+    .quote {
+      font-style: italic;
+      background: #2a2a2a;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 15px 0;
+      color: #ddd;
+      border-left: 4px solid var(--neon-green);
+    }
+
+    /* Стиль для текста в профиле */
+    .profile p {
+      color: #ccc;
+    }
+
+    /* Все пункты увлечений - кнопки */
+    .hobbies ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hobbies li {
+      margin: 10px auto;
+      max-width: 400px;
+      background: transparent;
+      padding: 0;
+    }
+
+    .hobby-btn {
+      display: block;
+      background: linear-gradient(135deg, var(--neon-green), var(--neon-green-dark));
+      color: #0a0a0a;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 0 5px var(--neon-green);
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .hobby-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    /* Отдельный стиль для ссылки энергетиков */
+    .energy-link {
+      display: block;
+      background: linear-gradient(135deg, var(--neon-green), var(--neon-green-dark));
+      color: #0a0a0a;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 0 5px var(--neon-green);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .energy-link:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    /* Хедер */
+    header {
+      background-color: #111;
+    }
+
+    header a {
+      color: white;
+      background-color: #333;
+    }
+
+    header a:hover {
+      background-color: #555;
+    }
+
+    /* Футер */
+    footer {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="#">Введенский Платон</a>
+  <a href="../index.html">Назад</a>
+</header>
+
+<section class="profile">
+  <img src="photo/platon_yep.jpeg" alt="Платон Введенский" id="profilePhoto">
+  <h1>Введенский Платон</h1>
+  
+  <div class="quote">
+    <em>"Запомни, молодость одна тралалелло траллала"</em>
+  </div>
+
+  <p><strong>О себе:</strong> Да, это я Пётр Водкин/Павел Винстон.</p>
+
+  <div class="hobbies">
+    <h2>Мои увлечения</h2>
+    <ul>
+      <li><button class="hobby-btn" data-img="photo/programming.jpg">Программирование</button></li>
+      <li><button class="hobby-btn" data-img="photo/music.jpg">Музыка</button></li>
+      <li><button class="hobby-btn" data-img="photo/gaming.jpg">Компьютерные игры</button></li>
+      <li><a class="energy-link" href="https://t.me/insult_energy" target="_blank">Коллекционирование энергетиков</a></li>
+    </ul>
+  </div>
+
+  <!-- КНОПКА РИКРОЛЛА -->
+  <button class="rroll-btn" id="rickrollBtn">Нажми на меня</button>
+</section>
+
+<footer>
+  Сделано при помощи чат гпт (нет) ❤️ | 2026
+</footer>
+
+<script>
+  // РИКРОЛЛ
+  const btn = document.getElementById('rickrollBtn');
+  
+  btn.addEventListener('click', function() {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+  });
+
+  // СМЕНА ФОТО ПРИ КЛИКЕ НА ГЛАВНОЕ ФОТО
+  const photo = document.getElementById('profilePhoto');
+  let isSecondPhoto = false;
+
+  photo.addEventListener('click', function() {
+    if (isSecondPhoto) {
+      photo.src = 'photo/platon_yep.jpeg';
+      isSecondPhoto = false;
+    } else {
+      photo.src = 'photo/platon_yep2.jpeg';
+      isSecondPhoto = true;
+    }
+  });
+
+  // КНОПКИ УВЛЕЧЕНИЙ (КРОМЕ ЭНЕРГЕТИКОВ) - ОТКРЫВАЮТ ФОТОГРАФИИ
+  const hobbyBtns = document.querySelectorAll('.hobby-btn');
+  
+  hobbyBtns.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const imgPath = button.getAttribute('data-img');
+      if (imgPath) {
+        window.open(imgPath, '_blank');
+      } else {
+        alert('Фотография не найдена');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
