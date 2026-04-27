@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(5px);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 8px 12px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+header a:hover {
+  background-color: #777;
+}
+
+.profile {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #764ba2;
+}
+
+.profile h1 {
+  margin: 10px 0;
+  font-size: 28px;
+  color: #764ba2;
+}
+
+.profile p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.hobbies {
+  margin-top: 30px;
+}
+
+.hobbies h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #667eea;
+}
+
+.hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hobbies ul li {
+  background-color: #f0f0f0;
+  margin: 5px auto;
+  padding: 10px;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
