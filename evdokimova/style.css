@@ -1,133 +1,196 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
+  font-family: Montserrat, sans-serif;
 }
 
-.page {
-    display: flex;
-    min-height: 100vh;
-    position: relative; 
+.screen {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 120px 100px 60px;
+  position: relative;
+}
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 110%;
+}
+
+.right img {
+  height: 100vh;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  filter: contrast(200%) brightness(110%);
 }
 
 
 .left {
-    width: 50%;
-    padding: 80px 60px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  max-width: 340px;
 }
 
-.left h1 {
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: 2px;
-    color: #000000
+
+h1 {
+  font-size: 64px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
-.text {
-    margin-top: -280px;
-    max-width: 550px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #000000;
-    font-weight: bold;
+
+.line {
+  width: 1px;
+  height: 80px;
+  background: #000000;
+  margin: 30px 0;
 }
 
-.text2 {
-    margin-top: -310px;
-    max-width: 550px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #000000;
+
+.block h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-.text3 {
-    margin-top: -290px;
-    max-width: 550px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #000000;
-    font-weight: bold;
-}
-
-.text4 {
-    margin-top: -310px;
-    max-width: 550px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #000000;
-}
-
-.buttons {
-    margin-top: 40px;
-    display: flex;
-    gap: 20px;
+.block p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
 }
 
 .btn {
-    text-decoration: none;
-    padding: 12px 26px;
-    border-radius: 30px;
-    font-size: 16px;
-    transition: 0.3s;
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  padding: 6px 18px;
+  border: 1px solid #000;
+  border-radius: 999px;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background: #000000;
+  color: #fff;
 }
 
 
-.back {
-    background: #000;
-    color: #fff;
+.bottom {
+  position: relative;
+  height: 50vh;
+  background: #000;
+  color: #fff;
+  padding: 200px 200px;
 }
 
-.back:hover {
-    background: #d62828; 
+.dog {
+  position: absolute;
+  left: 90px;
+  top: 100px;
+  width: 350px;
 }
 
-.outline {
-    border: 1px solid #000;
-    color: #000;
-    background: transparent;
+h2 {
+  font-size: 72px;
+  font-weight: 300;
+  margin-top: 200px;
+  font-weight: light;
 }
 
-
-.right {
-    width: 50%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.timeline {
+  position: absolute;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 20px;
 }
 
-.right img {
-    width: 770px;  
-    height: 956px;
-    object-fit: cover;
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #555;
 }
 
-.overlay-image {
-    position: absolute;
-    left: 42%;
-    bottom: 0;
-    transform: translateX(-50%) rotate(-30deg);
-    width: 400px;
-    z-index: 10;
-    pointer-events: none;
+.item {
+  position: relative;
+  margin: 30px 0;
+  font-size: 16px;
+  color: #aaa;
+  padding-left: 15px;
 }
 
-.burger-image {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%) rotate(20deg);
-    width: 400px;
-    z-index: 10;
-    pointer-events: none;
+.item::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+.bottom {
+  position: relative;
+  height: 50vh;
+  background: #000;
+  color: #fff;
+  padding: 200px 200px;
+}
+
+.album-block {
+  position: absolute;
+  right: 100px;
+  bottom: 80px;
+  width: 500px;
+  font-family: Montserrat, sans-serif;
+}
+
+.album-title {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.album-title strong {
+  font-size: 24px;
+  font-weight: 600;
+  display: block;
+  margin: -24px 0;
+}
+
+.album-title span {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.album-line {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin: 18px 0;
+  opacity: 0.7;
+}
+
+.track {
+  font-size: 18px;
+  font-weight: 300;
 }
