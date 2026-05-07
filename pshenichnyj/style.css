@@ -1,0 +1,92 @@
+body {
+  
+background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('photo/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 17px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #a15d33;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header a {
+  color: rgb(255, 222, 182);
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 8px 12px;
+  background-color: #490c0c;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+header a:hover {
+  background-color: #ff816e;
+}
+
+.profile {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgb(255, 219, 181);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(88, 22, 22, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile h1 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.profile p {
+  color: #772828;
+  line-height: 1.6;
+}
+
+.hobbies {
+  margin-top: 30px;
+}
+
+.hobbies h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hobbies ul li {
+  background-color: #fca16d;
+  margin: 5px auto;
+  padding: 10px;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0;
+  color: #ffffff;
+  font-size: 14px;
+}
